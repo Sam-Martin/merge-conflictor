@@ -9,4 +9,8 @@ router.get("/", (_, res) => {
 	res.json({ message: "Hello, world!" });
 });
 
+router.get("/hello/:name", (req, res) => {
+	res.json({ message: `Hello, ${req.params.name}` });
+});
+
 export default router;
